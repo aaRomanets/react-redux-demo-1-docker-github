@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  client:
+    build: .
+    container_name: react-redux-demo-1-client-frontend
+    ports:
+      - '2025:3000'
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+    network_mode: bridge
